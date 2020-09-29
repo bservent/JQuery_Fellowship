@@ -108,7 +108,7 @@ const keepItSecretKeepItSafe = () => {
   // when you think you have given Frodo the ring, check in your Elements tab
   
 };
-console.log(keepItSecretKeepItSafe);
+console.log('keepItSecretKeepItSafe');
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -117,13 +117,17 @@ console.log(keepItSecretKeepItSafe);
 // Chapter 4
 // ============
 const makeBaddies = () => {
-
   // 1. display an unordered list of baddies in Mordor
-
+  const $baddies = $('<ul></ul>');
   // 2. give each of the baddies a class of "baddy"
-
+  for (let i = 0; i < baddies.length; i++){
+    const $baddy = $('<li class="baddy">${baddies[i]<li>');
+    $baddies.append($baddy);
+  }
   // 3. remember to append them to Mordor
+  $('#Mordor').append($baddies);
 };
+console.log('baddies');
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
