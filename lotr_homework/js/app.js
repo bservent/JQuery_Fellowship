@@ -193,15 +193,17 @@ const beautifulStranger = () => {
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
-
+console.log('fellowship');
   // 1. create a new div with an id 'the-fellowship'
-
+const $fellowshipDiv = $('<div id="the-fellowship" /div>');
   // 2. add an h1 with the text 'The Fellowship' to this new div
-
+$fellowshipDiv.append('<h1>The Fellowship</h1>');
   // 3. append the fellowship to middle-earth
-
+$('#middle-earth').append($fellowshipDiv);
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+const $hobbitList = $('#Rivendell ul').remove();
+const $buddyList = $('aside ul').remove();
+$fellowshipDiv.append($buddyList).append($hobbitList);
 };
 
 // COMMIT YOUR WORK
