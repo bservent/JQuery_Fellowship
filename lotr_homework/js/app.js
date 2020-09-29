@@ -158,6 +158,7 @@ console.log('make buddies');
 // Chapter 6
 // ============
 const leaveTheShire = () => {
+  console.log('leave the shire')
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
   const $hobbitsRivendell = $('#The-Shire ul').remove();
@@ -165,7 +166,6 @@ const leaveTheShire = () => {
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
@@ -175,7 +175,13 @@ const leaveTheShire = () => {
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
+  console.log('stranger');
+  const $buddyList = $('aside li');
+  for (let i = 0; i < $buddyList.length; i++) {
+    if ($buddyList.eq(i).text() === 'Strider') {
+      $buddyList.eq(i).text('Aragorn');
+    }
+  }
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
