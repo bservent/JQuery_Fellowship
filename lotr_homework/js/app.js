@@ -301,11 +301,12 @@ console.log('my precious');
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+      $('#gollum').remove();
   // 2. remove all the baddies from the DOM
-
+      $('#Mordor .baddy').remove();
   // 3. Move all the hobbits back to the shire
-
+      const $hobbits = $('.hobbit').remove();
+      $('#The-Shire').append($hobbits);
 };
 
 // COMMIT YOUR WORK
