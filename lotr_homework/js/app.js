@@ -213,13 +213,19 @@ $fellowshipDiv.append($buddyList).append($hobbitList);
 // Chapter 9
 // ============
 const theBalrog = () => {
+  console.log('the balrog');
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-
+  const $buddy = $('#the-fellowship .buddy');
+  for (let i = 0; i < $buddy.length; i++) {
+    if ($buddy.eq(i).text() === 'Gandalf the Grey') {
+      $buddy.eq(i).text('Gandalf the White');
   // 2. add a class "the-white" to this element
-
+  $buddy.eq(i).addClass('the-white');
+  }
+}
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
-
+  $('.the-white').css({'background':'white', 'border':'1px solid gray'})
 };
 
 // COMMIT YOUR WORK
@@ -231,11 +237,21 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-
+        alert('the horn of gondor has been blown');
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+  const $buddy = $('#the-fellowship .buddy');
+  for (let i = 0; i < $buddy.length; i++) {
+    if ($buddy.eq(i).text() === 'Boromir') {
+      $buddy.eq(i).css('text-decoration', 'line-through');
+    }
+  }
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+  const $baddy = $('#Mordor .baddy');
+  for (let i = 0; i < $baddy.length; i++) {
+    if ($baddy.eq(i).text() === 'The Uruk-hai') {
+      $baddy.eq(i).remove();
+    }
+  }
 };
 
 // COMMIT YOUR WORK
