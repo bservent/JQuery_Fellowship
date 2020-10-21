@@ -85,7 +85,7 @@ const makeHobbits = () => {
     $liHobbits.attr('class', 'hobbit');
     // hint: get 'The-Shire' by using its id
     $ulHobbitsList.append($liHobbits);
-    console.log(`($ulHobbitsList)`);
+    console.log(hobbits[i])
   } 
 };
 
